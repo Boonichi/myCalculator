@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'UI/colors.dart';
-import 'UI/home_page.dart';
+import 'Pages/home_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: CompanyColors.black,
       ),
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {'/': (context) => HomePage()},
       debugShowCheckedModeBanner: false,
     );
   }
